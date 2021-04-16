@@ -1,0 +1,5 @@
+python-crontab
+python-redmine
+pyyaml
+requests
+urllib2

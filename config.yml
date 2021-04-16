@@ -1,0 +1,10 @@
+defconfig: #do not edit
+  eltex_host: http://eltex.loc/index.php?option=com_qcontacts&view=category&catid=12&Itemid=15
+  red: http://172.16.0.41
+timetracker:
+  current_tasks: {}
+  online: null
+userconf:
+  key: null
+  name: null
+  redname: null
