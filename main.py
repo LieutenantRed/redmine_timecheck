@@ -7,8 +7,8 @@ from os import getcwd as pwd
 # use crontab -l to show all cronjobs
 
 with CronTab(user=True) as cron:
-	location = pwd()
-	job = cron.new(command=f'{location}/cronjop.py')
-	job.hour.every(1)
-	job.set_comment("Timechecker for redmine")
-	cron.write()
+    location = pwd()
+    job = cron.new(command=f'{location}/cronjop.py')
+    job.hour.every(1)
+    job.set_comment("Timechecker for redmine")
+    cron.write()

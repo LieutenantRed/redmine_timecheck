@@ -4,24 +4,27 @@ from re import search as grep
 import requests
 from html.parser import HTMLParser
 from yaml import safe_load
-
 from enum import Enum
+
+
 class Status(Enum):
     error   = 0
     work    = 1
     no_work = 2
     holiday = 3
 
+
 regName = r"^'[A-z]+\.[A-z]+.[A-z]+'$"
 regStatus = r'^[A-z-]*-icon'
 parser = HTMLParser()
 config = safe_load(open("config.yml"))
 
+
 def eltex_get_employee_status(find_name):
     names, status = __eltex_get_people_list()
     if find_name in names:
         idx = names.index(find_name)
-        return status[idx];
+        return status[idx]
     else:
         return Status.error
 
